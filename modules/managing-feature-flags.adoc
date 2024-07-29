@@ -9,7 +9,7 @@
 == Prerequisites
 * You have access to the environment where the {product-title-short} component is deployed.
 * You have permission to modify environment variables.
-* You understand the differences between `dev-preview` and `tech-preview` release stages. For more information see the link:https://access.redhat.com/articles/6966848[Developer and Technology Previews: How they compare].
+* You understand that the Technological Preview features might be incomplete and are provided with limited support.
 * You know if the feature flag needs to be configured before the deployment. Check the installation manifests to see if they use the required flag.
 
 .Procedure
@@ -29,12 +29,14 @@ Once the application is restarted or redeployed, verify that the feature has bee
 * Review logs or monitoring tools for any errors or confirmation messages.
 
 == Best Practices
-* *Dev-Preview*: Do not enable dev-preview features.
-* *Testing:* Always test feature changes in a staging environment before applying them to production.
-* *Documentation:* Keep a record of all feature flags and their current status.
-* *Rollback:* Be prepared to revert the changes if the feature causes issues.
+Follow these best practices for using the feature flag:
+
+* Always test feature changes in a staging environment before applying them to production.
+* Keep a record of all feature flags and their current status.
+* Be prepared to revert the changes if the feature causes issues.
 
 == Troubleshooting
 Follow these troubleshooting guidelines:
+
 * If the feature does not appear, ensure that the environment variable is correctly named and set. Check application logs for any errors related to feature flag parsing.
 * If enabling a feature causes application errors, disable the feature and contact support.
