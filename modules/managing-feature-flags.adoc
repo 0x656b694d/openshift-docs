@@ -22,7 +22,6 @@ Consult the release notes or the `/v1/featureflags` API endpoint to identify the
 * To disable a feature, set the environment variable associated with the flag to `false`.
 
 . After the application is restarted or redeployed, verify that the feature has been enabled or disabled by completing the following steps:
-Once the application is restarted or redeployed, verify that the feature has been enabled or disabled as intended:
 
 * Check the output of the `/v1/featureflags` API endpoint.
 * Check the application functionality related to the feature.
