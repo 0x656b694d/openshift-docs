@@ -1,0 +1,39 @@
+// Module included in the following assemblies:
+//
+// * configuration/managing-preview-features.adoc
+
+:_mod-docs-content-type: PROCEDURE
+[id="managing-feature-flags_{context}"]
+= Managing Feature Flags
+
+== Prerequisites
+* Access to the environment where the {product-title-short} component is deployed.
+* Permission to modify environment variables.
+* Understanding the differences between `dev-preview` and `tech-preview` release stages. For more information see the link:https://access.redhat.com/articles/6966848[Developer and Technology Previews: How they compare].
+* Understanding if the feature flag needs to be configured before the deployment: see if the installation manifests make use of the required flag.
+
+.Procedure
+
+. Identify the Feature Flag.
+Consult the release notes or `/v1/featureflags` API endpoint to identify the flag for the feature you want to enable or disable.
+
+. Modify the Feature Flag.
+* To *enable* a feature, configure the deployment of the {product-title-short} component to include the environment variable, associated to the flag, with the value set to `true`.
+* To *disable* a feature, set the environment variable to `false`.
+
+. Verify the Changes.
+Once the application is restarted or redeployed, verify that the feature has been enabled or disabled as intended:
+
+* Check the output of the `/v1/featureflags` API endpoint.
+* Check the application functionality related to the feature.
+* Review logs or monitoring tools for any errors or confirmation messages.
+
+== Best Practices
+* *Dev-Preview*: Do not enable dev-preview features.
+* *Testing:* Always test feature changes in a staging environment before applying them to production.
+* *Documentation:* Keep a record of all feature flags and their current status.
+* *Rollback:* Be prepared to revert the changes if the feature causes issues.
+
+== Troubleshooting
+* *Feature Not Appearing:* Ensure the environment variable is correctly named and set. Check application logs for any errors related to feature flag parsing.
+* *Application Errors:* If enabling a feature causes application errors, disable the feature and contact support.
