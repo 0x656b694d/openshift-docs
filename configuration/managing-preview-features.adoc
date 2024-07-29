@@ -1,6 +1,6 @@
 :_mod-docs-content-type: ASSEMBLY
 [id="managing-preview-features"]
-= Managing preview features
+= Managing technology preview features
 include::modules/common-attributes.adoc[]
 :context: managing-preview-features
 
@@ -8,7 +8,7 @@ toc::[]
 
 [role="_abstract"]
 
-You can enable or disable features that are in the "dev-preview" or "tech-preview" stages by using feature flags. These features are in early release stages and might not be fully stable. Use them at your discretion.
+You can enable or disable features that are in the Technology Preview stages by using feature flags. These features might be incomplete, instable, and are provided with limited support. Use them at your discretion.
 
 //Managing feature flags
 include::modules/managing-feature-flags.adoc[leveloffset=+1]
