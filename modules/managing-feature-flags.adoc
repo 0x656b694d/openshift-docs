@@ -7,21 +7,21 @@
 = Managing Feature Flags
 
 == Prerequisites
-* Access to the environment where the {product-title-short} component is deployed.
-* Permission to modify environment variables.
-* Understanding the differences between `dev-preview` and `tech-preview` release stages. For more information see the link:https://access.redhat.com/articles/6966848[Developer and Technology Previews: How they compare].
-* Understanding if the feature flag needs to be configured before the deployment: see if the installation manifests make use of the required flag.
+* You have access to the environment where the {product-title-short} component is deployed.
+* You have permission to modify environment variables.
+* You understand the differences between `dev-preview` and `tech-preview` release stages. For more information see the link:https://access.redhat.com/articles/6966848[Developer and Technology Previews: How they compare].
+* You know if the feature flag needs to be configured before the deployment. Check the installation manifests to see if they use the required flag.
 
 .Procedure
 
-. Identify the Feature Flag.
-Consult the release notes or `/v1/featureflags` API endpoint to identify the flag for the feature you want to enable or disable.
+. Identify the environment variable name, associated with the feature flag.
+Consult the release notes or the `/v1/featureflags` API endpoint to identify the flag for the feature you want to enable or disable.
 
-. Modify the Feature Flag.
-* To *enable* a feature, configure the deployment of the {product-title-short} component to include the environment variable, associated to the flag, with the value set to `true`.
-* To *disable* a feature, set the environment variable to `false`.
+. Modify the feature flag by completing one of the following actions:
+* To enable a feature, configure the environment variable associated with the flag by setting its value to `true`.
+* To disable a feature, set the environment variable associated with the flag to `false`.
 
-. Verify the Changes.
+. After the application is restarted or redeployed, verify that the feature has been enabled or disabled by completing the following steps:
 Once the application is restarted or redeployed, verify that the feature has been enabled or disabled as intended:
 
 * Check the output of the `/v1/featureflags` API endpoint.
@@ -35,5 +35,6 @@ Once the application is restarted or redeployed, verify that the feature has bee
 * *Rollback:* Be prepared to revert the changes if the feature causes issues.
 
 == Troubleshooting
-* *Feature Not Appearing:* Ensure the environment variable is correctly named and set. Check application logs for any errors related to feature flag parsing.
-* *Application Errors:* If enabling a feature causes application errors, disable the feature and contact support.
+Follow these troubleshooting guidelines:
+* If the feature does not appear, ensure that the environment variable is correctly named and set. Check application logs for any errors related to feature flag parsing.
+* If enabling a feature causes application errors, disable the feature and contact support.

@@ -8,7 +8,7 @@ toc::[]
 
 [role="_abstract"]
 
-This documentation explains how to enable or disable features that are in the "dev-preview" or "tech-preview" stages using feature flags. These features are in early release stages and might not be fully stable. Use them at your discretion.
+You can enable or disable features that are in the "dev-preview" or "tech-preview" stages by using feature flags. These features are in early release stages and might not be fully stable. Use them at your discretion.
 
 //Managing feature flags
 include::modules/managing-feature-flags.adoc[leveloffset=+1]
