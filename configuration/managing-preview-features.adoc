@@ -8,7 +8,7 @@ toc::[]
 
 [role="_abstract"]
 
-You can enable or disable features that are in the Technology Preview stages by using feature flags. These features might be incomplete, unstable, and are provided with limited support. Use them at your discretion.
+You can enable or disable features that are Technology Preview by using feature flags. These features might be incomplete, unstable, and are provided with limited support. Use them at your discretion.
 
 //Managing feature flags
 include::modules/managing-feature-flags.adoc[leveloffset=+1]
